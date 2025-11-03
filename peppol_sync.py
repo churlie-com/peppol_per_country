@@ -14,15 +14,15 @@ import xml.etree.ElementTree as ET
 from typing import Dict, TextIO, Optional
 from urllib.request import urlopen
 from urllib.error import URLError
+import time
 import subprocess
 
 
 class PeppolSync:
     """Main class for PEPPOL export synchronization"""
 
-    def __init__(self, tmp_dir: str = "tmp", log_dir: str = "log", verbose: bool = False, max_bytes: int = 1000000, keep_tmp: bool = False):
+    def __init__(self, tmp_dir: str = "tmp", verbose: bool = False, max_bytes: int = 1000000, keep_tmp: bool = False):
         self.tmp_dir = Path(tmp_dir)
-        self.log_dir = Path(log_dir)
         self.verbose = verbose
         self.extracts_dir = Path("extracts")
         self.file_stats = {}
@@ -31,7 +31,6 @@ class PeppolSync:
 
         # Create directories
         self.tmp_dir.mkdir(exist_ok=True)
-        self.log_dir.mkdir(exist_ok=True)
         self.extracts_dir.mkdir(exist_ok=True)
 
 
@@ -41,8 +40,8 @@ class PeppolSync:
         self.file_count = 0  # Track number of output files created
 
         # Setup logging
-        log_file = self.log_dir / f"peppol_sync.{datetime.now().strftime('%Y-%m-%d')}.log"
-        self.log_handle = open(log_file, "a")
+        log_file = self.extracts_dir / "peppol_sync.log"
+        self.log_handle = open(log_file, "w") # Changed to 'w' to start empty
 
     def log(self, message: str):
         """Write to log file"""
@@ -79,6 +78,8 @@ class PeppolSync:
         self.announce(f"Downloading PEPPOL export from {url}")
         self.log(f"download_xml: {url}")
 
+        start_time = time.time() # Record start time
+
         try:
             # Open URL connection
             with urlopen(url) as response:
@@ -110,11 +111,15 @@ class PeppolSync:
                             else:
                                 self.progress(f"Downloading {downloaded_mb:.1f} MB")
 
+            end_time = time.time() # Record end time
+            duration = end_time - start_time
+            throughput = (total_size / (1024 * 1024)) / duration if duration > 0 else 0
+
             # Verify file was created
             if output_file.exists():
                 file_size_mb = output_file.stat().st_size / (1024 * 1024)
-                self.success(f"Downloaded to {output_file.name} ({file_size_mb:.1f} MB)")
-                self.log(f"download_xml: {file_size_mb:.1f} MB downloaded")
+                self.success(f"Downloaded to {output_file.name} ({file_size_mb:.1f} MB) in {duration:.1f}s at {throughput:.1f} MB/s")
+                self.log(f"download_xml: {file_size_mb:.1f} MB downloaded in {duration:.1f}s at {throughput:.1f} MB/s")
                 return output_file
             else:
                 raise FileNotFoundError(f"Download completed but file not found: {output_file}")
@@ -294,6 +299,46 @@ class PeppolSync:
 
         return processed_cards
 
+    def generate_report(self):
+        """Generate a markdown report of the sync operation"""
+        self.announce("Generating report")
+        report_path = self.extracts_dir / "report.md"
+
+        with open(report_path, "w", encoding="utf-8") as f:
+            f.write("# PEPPOL Sync Report\n\n")
+            f.write(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+
+            f.write("| Country | Files | Cards | Size (MB) |\n")
+            f.write("|---|---:|---:|---:|\n")
+
+            total_files = 0
+            total_cards = 0
+            total_size_mb = 0
+
+            countries = sorted([k.replace("country_", "") for k in self.stats.keys() if k.startswith("country_")])
+
+            for country in countries:
+                country_dir = self.extracts_dir / country
+                if not country_dir.is_dir():
+                    continue
+
+                files = list(country_dir.glob("*.xml"))
+                file_count = len(files)
+                card_count = self.stats.get(f"country_{country}", 0)
+                size_bytes = sum(p.stat().st_size for p in files)
+                size_mb = size_bytes / (1024 * 1024)
+
+                f.write(f"| {country} | {file_count} | {card_count} | {size_mb:.2f} |\n")
+
+                total_files += file_count
+                total_cards += card_count
+                total_size_mb += size_mb
+
+            f.write(f"| **Total** | **{total_files}** | **{total_cards}** | **{total_size_mb:.2f}** |\n")
+
+        self.success(f"Report generated at {report_path}")
+        self.log(f"Report generated at {report_path}")
+
     def sync(self, force_download: bool = False):
         """Main sync operation"""
         self.log("Starting sync operation")
@@ -317,10 +362,17 @@ class PeppolSync:
             # Show summary
             print("\n📊 Summary:")
             print(f"   Total business cards: {cards_processed:,}")
+            
+            countries = [k.replace("country_", "") for k in self.stats.keys() if k.startswith("country_")]
+            print(f"   Countries found: {len(countries)}")
+            self.log(f"Countries found: {len(countries)}")
+
             print(f"   Output files created: {self.file_count}")
+            self.log(f"Output files created: {self.file_count}")
             print(f"   Output directory: {self.extracts_dir}/")
 
             self.success("Sync complete!")
+            self.generate_report()
             return 0
 
         except Exception as e:
@@ -388,11 +440,7 @@ def main():
         help="Temporary directory (default: tmp)"
     )
 
-    parser.add_argument(
-        "-L", "--log-dir",
-        default="log",
-        help="Log directory (default: log)"
-    )
+
 
     parser.add_argument(
         "-v", "--verbose",
@@ -431,7 +479,6 @@ def main():
     # Create sync instance
     syncer = PeppolSync(
         tmp_dir=args.tmp_dir,
-        log_dir=args.log_dir,
         verbose=args.verbose,
         max_bytes=args.max_bytes,
         keep_tmp=args.keep_tmp
@@ -454,7 +501,6 @@ def main():
         elif args.action == "check":
             print("✅ Configuration OK")
             print(f"   Temp directory: {syncer.tmp_dir}")
-            print(f"   Log directory: {syncer.log_dir}")
             print(f"   Extracts directory: {syncer.extracts_dir}")
             return 0
         elif args.action == "huge":
