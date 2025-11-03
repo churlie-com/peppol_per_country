@@ -20,13 +20,14 @@ import subprocess
 class PeppolSync:
     """Main class for PEPPOL export synchronization"""
 
-    def __init__(self, tmp_dir: str = "tmp", log_dir: str = "log", verbose: bool = False, max_bytes: int = 1000000):
+    def __init__(self, tmp_dir: str = "tmp", log_dir: str = "log", verbose: bool = False, max_bytes: int = 1000000, keep_tmp: bool = False):
         self.tmp_dir = Path(tmp_dir)
         self.log_dir = Path(log_dir)
         self.verbose = verbose
         self.extracts_dir = Path("extracts")
         self.file_stats = {}
         self.max_bytes = max_bytes
+        self.keep_tmp = keep_tmp
 
         # Create directories
         self.tmp_dir.mkdir(exist_ok=True)
@@ -331,9 +332,25 @@ class PeppolSync:
             self.log_handle.close()
 
     def cleanup(self):
-        """Close any open resources"""
+        """Close any open resources and clean up temp files"""
+        # Close log file
         if self.log_handle and not self.log_handle.closed:
             self.log_handle.close()
+
+        # Clean up tmp files unless keep_tmp is set
+        if not self.keep_tmp and self.tmp_dir.exists():
+            import shutil
+            try:
+                files_removed = 0
+                for file_path in self.tmp_dir.glob("*"):
+                    if file_path.is_file():
+                        file_path.unlink()
+                        files_removed += 1
+
+                if files_removed > 0:
+                    print(f"\n🧹 Cleaned up {files_removed} temporary file(s) from {self.tmp_dir}/")
+            except Exception as e:
+                print(f"\n⚠️  Warning: Could not clean up tmp files: {e}")
 
     def show_huge_files(self, number: int = 10) -> int:
         """Show the N largest XML files under extracts/"""
@@ -403,6 +420,12 @@ def main():
         help="Maximum number of bytes per output file (default: 1000000)"
     )
 
+    parser.add_argument(
+        "--keep-tmp",
+        action="store_true",
+        help="Keep temporary files after processing (default: delete)"
+    )
+
     args = parser.parse_args()
 
     # Create sync instance
@@ -410,7 +433,8 @@ def main():
         tmp_dir=args.tmp_dir,
         log_dir=args.log_dir,
         verbose=args.verbose,
-        max_bytes=args.max_bytes
+        max_bytes=args.max_bytes,
+        keep_tmp=args.keep_tmp
     )
 
     try:

@@ -43,6 +43,7 @@ python3 peppol_sync.py huge -n 20
 - `-f, --force`: Force re-download even if file exists
 - `-n, --number`: Number of largest files to show (default: 10)
 - `--max-bytes`: Maximum bytes per output file (default: 1000000)
+- `--keep-tmp`: Keep temporary files after processing (default: auto-delete)
 
 ## Output Structure
 
@@ -58,5 +59,14 @@ extracts/
 │   ├── business-cards.000002.xml
 │   └── business-cards.000003.xml
 └── ...
+```
+
+## Cleanup
+
+By default, the script automatically deletes all files in the `tmp/` directory after successful processing to save disk space. The large XML export file can be several gigabytes.
+
+To keep temporary files for debugging or inspection:
+```bash
+python3 peppol_sync.py sync --keep-tmp
 ```
 
