@@ -1,0 +1,47 @@
+name: Daily Update
+
+# Controls when the workflow will run
+on:
+  schedule:
+    - cron: "15 9 * * *"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Set up Python
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # Download and split XML into country/month files
+      - name: Download from directory.peppol.eu and split in subfiles
+        run: python3 peppol_sync.py sync
+
+      # Commit and push changes if any
+      - name: Commit and push changes
+        run: |
+          git config user.name "Bashew Runner"
+          git config user.email "actions@users.noreply.github.com"
+          git add extracts/
+          if git diff --quiet --cached; then
+            echo "No changes to commit"
+          else
+            TIMESTAMP=$(date -u)
+            git commit -m "${TIMESTAMP} < peppol_sync automated update"
+            git pull --rebase
+            git push
+            echo "Changes committed and pushed"
+          fi
