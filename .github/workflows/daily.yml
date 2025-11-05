@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install dependencies
+        run: pip install lxml
+
       # Download and split XML into country/month files
       - name: Download from directory.peppol.eu and split in subfiles
         run: python3 peppol_sync.py sync -V

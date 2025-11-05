@@ -10,8 +10,10 @@ import os
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
-import xml.etree.ElementTree as ET
-from xml.dom import minidom
+try:
+    from lxml import etree as ET
+except ImportError:
+    sys.exit("lxml is not installed. Please run 'pip install lxml' to use this script.")
 from typing import Dict, TextIO, Optional
 from urllib.request import urlopen
 from urllib.error import URLError
@@ -126,27 +128,27 @@ class PeppolSync:
 
 
 
-    def extract_country_from_minidom(self, dom: minidom.Document) -> Optional[str]:
-        """Extract country code from minidom document"""
-        entities = dom.getElementsByTagName("entity")
-        if entities:
-            return entities[0].getAttribute("countrycode")
+    def extract_country_from_etree(self, element: ET.Element) -> Optional[str]:
+        """Extract country code from ElementTree element"""
+        entity = element.find(".//entity")
+        if entity is not None:
+            return entity.get("countrycode")
         return None
 
-    def extract_date_from_minidom(self, dom: minidom.Document) -> Optional[str]:
-        """Extract registration date from minidom document"""
-        regdates = dom.getElementsByTagName("regdate")
-        if regdates and regdates[0].firstChild and regdates[0].firstChild.data:
-            date_str = regdates[0].firstChild.data.strip()
+    def extract_date_from_etree(self, element: ET.Element) -> Optional[str]:
+        """Extract registration date from ElementTree element"""
+        regdate = element.find(".//regdate")
+        if regdate is not None and regdate.text:
+            date_str = regdate.text.strip()
             if len(date_str) >= 10:
                 return date_str[:10]
         return None
 
-    def extract_entity_name_from_minidom(self, dom: minidom.Document) -> Optional[str]:
-        """Extract entity name from minidom document"""
-        names = dom.getElementsByTagName("name")
-        if names:
-            return names[0].getAttribute("name")
+    def extract_entity_name_from_etree(self, element: ET.Element) -> Optional[str]:
+        """Extract entity name from ElementTree element"""
+        name = element.find(".//name")
+        if name is not None:
+            return name.get("name")
         return None
 
     def process_xml(self, input_file: Path):
@@ -157,12 +159,12 @@ class PeppolSync:
         if not input_file.exists():
             raise FileNotFoundError(f"Input file not found: {input_file}")
 
-        start_time = time.time() # Record start time
+        start_time = time.time()  # Record start time
 
         chunk_size = 1024 * 1024  # 1MB
         buffer = ""
         separator = "</businesscard>"
-        
+
         header = ""
         header_found = False
         open_files: Dict[str, TextIO] = {}
@@ -180,7 +182,7 @@ class PeppolSync:
                         header = buffer[:header_end]
                         buffer = buffer[header_end:]
                         header_found = True
-                
+
                 if not header_found:
                     self.log("No <businesscard> tag found.")
                     return 0
@@ -191,7 +193,7 @@ class PeppolSync:
                         chunk = f.read(chunk_size)
                         if not chunk: break
                         buffer += chunk
-                    
+
                     if separator not in buffer: break
 
                     end_index = buffer.find(separator) + len(separator)
@@ -202,24 +204,26 @@ class PeppolSync:
                     if processed_cards % 100000 == 0:
                         duration = time.time() - start_time
                         throughput = processed_cards / duration if duration > 0 else 0
-                        self.progress(f"{processed_cards:,} business cards in {duration:.1f}s: {throughput:.0f} cards/sec")
+                        self.progress(
+                            f"{processed_cards:,} business cards in {duration:.1f}s: {throughput:.0f} cards/sec")
 
                     try:
-                        dom = minidom.parseString(card_xml)
-                        country = self.extract_country_from_minidom(dom)
-                        date = self.extract_date_from_minidom(dom)
+                        # Use lxml for fast parsing and pretty printing
+                        root = ET.fromstring(card_xml.encode('utf-8'))
+                        country = self.extract_country_from_etree(root)
+                        date = self.extract_date_from_etree(root)
 
                         if not country:
                             self.log(f"Could not extract country from card: {card_xml[:100]}")
                             continue
 
                         self.stats[f"country_{country}"] += 1
-                        
+
                         if not date:
-                            entity_name = self.extract_entity_name_from_minidom(dom)
+                            entity_name = self.extract_entity_name_from_etree(root)
                             safe_name = "".join(filter(str.isalnum, entity_name or ""))[:5].upper()
                             date = f"2000-{safe_name}" if safe_name else "2000-UNKNOWN"
-                        
+
                         self.stats[f"date_{date}"] += 1
 
                         # File writing logic
@@ -241,12 +245,12 @@ class PeppolSync:
                                 self.file_count += 1
                             open_files[country] = file_handle
 
-                        # Pretty print the XML before writing
-                        pretty_card_xml = dom.documentElement.toprettyxml(indent="    ")
-                        indented_card = "    " + pretty_card_xml.replace("\n", "\n    ").rstrip()
+                        # Pretty print the XML using lxml
+                        pretty_card_xml = ET.tostring(root, pretty_print=True, encoding='unicode')
+                        indented_card = "    " + pretty_card_xml.strip().replace('\n', '\n    ')
                         open_files[country].write("\n" + indented_card)
 
-                    except ET.ParseError as e:
+                    except ET.XMLSyntaxError as e:
                         self.log(f"Error parsing card XML: {e} - XML: {card_xml[:200]}")
                         continue
         finally:
@@ -256,8 +260,8 @@ class PeppolSync:
 
         duration = time.time() - start_time
         throughput = processed_cards / duration if duration > 0 else 0
-        self.success(f"Processed {processed_cards:,} business cards in {duration:.0f}s: {throughput:%.0f} cards/sec")
-        self.log(f"Processed {processed_cards:,} business cards in {duration:.0f}s: {throughput:%.0f} cards/sec")
+        self.success(f"Processed {processed_cards:,} business cards in {duration:.0f}s: {throughput:.0f} cards/sec")
+        self.log(f"Processed {processed_cards:,} business cards in {duration:.0f}s: {throughput:.0f} cards/sec")
 
         countries = [k.replace("country_", "") for k in self.stats.keys() if k.startswith("country_")]
 
