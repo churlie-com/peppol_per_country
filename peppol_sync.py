@@ -99,9 +99,11 @@ class PeppolSync:
                         downloaded += len(chunk)
 
                         # Update progress every MB
-                        if downloaded % (1024 * 1024) == 0 or not chunk:
+                        if downloaded % (100 * 1024 * 1024) == 0 or not chunk:
+                            duration = time.time() - start_time
                             downloaded_mb = downloaded / (1024 * 1024)
-                            self.progress(f"Downloading {downloaded_mb:.1f} MB")
+                            throughput = downloaded_mb / duration if duration > 0 else 0
+                            self.progress(f"Downloading {downloaded_mb:.1f} MB @ {duration:.1f}s: {throughput:.2f} MB/s")
 
             end_time = time.time() # Record end time
 
@@ -110,8 +112,8 @@ class PeppolSync:
                 file_size_mb = output_file.stat().st_size / (1024 * 1024)
                 duration = end_time - start_time
                 throughput = file_size_mb / duration if duration > 0 else 0
-                self.success(f"Downloaded to {output_file.name} ({file_size_mb:.1f} MB) in {duration:.1f}s at {throughput:.1f} MB/s")
-                self.log(f"download_xml: {file_size_mb:.1f} MB downloaded in {duration:.1f}s at {throughput:.1f} MB/s")
+                self.success(f"Downloaded to {output_file.name} ({file_size_mb:.0f} MB) in {duration:.0f}s at {throughput:.0f} MB/s")
+                self.log(f"download_xml: {file_size_mb:.0f} MB downloaded in {duration:.0f}s at {throughput:.0f} MB/s")
                 return output_file
             else:
                 raise FileNotFoundError(f"Download completed but file not found: {output_file}")
@@ -157,6 +159,8 @@ class PeppolSync:
         if not input_file.exists():
             raise FileNotFoundError(f"Input file not found: {input_file}")
 
+        start_time = time.time() # Record start time
+
         chunk_size = 1024 * 1024  # 1MB
         buffer = ""
         separator = "</businesscard>"
@@ -198,7 +202,9 @@ class PeppolSync:
 
                     processed_cards += 1
                     if processed_cards % 100000 == 0:
-                        self.progress(f"Processed {processed_cards:,} business cards...")
+                        duration = time.time() - start_time
+                        throughput = processed_cards / duration if duration > 0 else 0
+                        self.progress(f"{processed_cards:,} business cards in {duration:.1f}s: {throughput:.0f} cards/sec")
 
                     try:
                         elem = ET.fromstring(card_xml)
@@ -255,8 +261,6 @@ class PeppolSync:
         self.log(f"Processing complete: {processed_cards} cards processed")
 
         countries = [k.replace("country_", "") for k in self.stats.keys() if k.startswith("country_")]
-        self.log(f"Found {len(countries)} countries")
-        self.log(f"Created {self.file_count} output files")
 
         return processed_cards
 
@@ -359,7 +363,7 @@ class PeppolSync:
         finally:
             self.log_handle.close()
 
-    def cleanup(self):
+    def cleanup_after(self):
         """Close any open resources and clean up temp files"""
         # Close log file
         if self.log_handle and not self.log_handle.closed:
@@ -410,8 +414,6 @@ def main():
         help="Action to perform"
     )
 
-
-
     parser.add_argument(
         "-V", "--verbose",
         action="store_true",
@@ -426,7 +428,7 @@ def main():
 
     parser.add_argument(
         "-C", "--nocleanup",
-        action="store_false",
+        action="store_true",
         help="Do not delete existing XML files in extracts/ before starting (default: delete)"
     )
 
@@ -487,7 +489,7 @@ def main():
         print(f"\n❌ Fatal error: {e}")
         return 1
     finally:
-        syncer.cleanup()
+        syncer.cleanup_after()
 
 
 if __name__ == "__main__":
