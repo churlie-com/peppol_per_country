@@ -17,6 +17,8 @@ from urllib.request import urlopen
 from urllib.error import URLError
 import time
 import subprocess
+import socket
+import getpass
 
 
 class PeppolSync:
@@ -34,8 +36,6 @@ class PeppolSync:
         self.tmp_dir.mkdir(exist_ok=True)
         self.extracts_dir.mkdir(exist_ok=True)
 
-
-
         # Statistics
         self.stats = defaultdict(int)
         self.file_count = 0  # Track number of output files created
@@ -43,6 +43,7 @@ class PeppolSync:
         # Setup logging
         log_file = self.extracts_dir / "peppol_sync.log"
         self.log_handle = open(log_file, "w") # Changed to 'w' to start empty
+        self.log(f"User: {getpass.getuser()}, Host: {socket.gethostname()}, CWD: {os.getcwd()}")
 
     def log(self, message: str):
         """Write to log file"""
@@ -84,12 +85,6 @@ class PeppolSync:
         try:
             # Open URL connection
             with urlopen(url) as response:
-                total_size = int(response.headers.get('content-length', 0))
-                total_mb = total_size / (1024 * 1024)
-
-                self.log(f"Download size: {total_mb:.1f} MB")
-                self.progress(f"Downloading {total_mb:.1f} MB...")
-
                 # Download in chunks
                 chunk_size = 8192  # 8KB chunks
                 downloaded = 0
@@ -106,19 +101,15 @@ class PeppolSync:
                         # Update progress every MB
                         if downloaded % (1024 * 1024) == 0 or not chunk:
                             downloaded_mb = downloaded / (1024 * 1024)
-                            if total_size > 0:
-                                percent = (downloaded / total_size) * 100
-                                self.progress(f"Downloading {downloaded_mb:.1f}/{total_mb:.1f} MB ({percent:.1f}%)")
-                            else:
-                                self.progress(f"Downloading {downloaded_mb:.1f} MB")
+                            self.progress(f"Downloading {downloaded_mb:.1f} MB")
 
             end_time = time.time() # Record end time
-            duration = end_time - start_time
-            throughput = (total_size / (1024 * 1024)) / duration if duration > 0 else 0
 
             # Verify file was created
             if output_file.exists():
                 file_size_mb = output_file.stat().st_size / (1024 * 1024)
+                duration = end_time - start_time
+                throughput = file_size_mb / duration if duration > 0 else 0
                 self.success(f"Downloaded to {output_file.name} ({file_size_mb:.1f} MB) in {duration:.1f}s at {throughput:.1f} MB/s")
                 self.log(f"download_xml: {file_size_mb:.1f} MB downloaded in {duration:.1f}s at {throughput:.1f} MB/s")
                 return output_file
@@ -242,21 +233,22 @@ class PeppolSync:
                             output_path.parent.mkdir(parents=True, exist_ok=True)
                             file_handle = open(output_path, "a", encoding="utf-8")
                             if file_handle.tell() == 0:
-                                file_handle.write(header)
+                                file_handle.write(header.replace('><', '>\n<'))
                                 self.file_count += 1
                             open_files[country] = file_handle
 
                         # Pretty print the XML before writing
                         dom = minidom.parseString(card_xml)
                         pretty_card_xml = dom.documentElement.toprettyxml(indent="    ")
-                        open_files[country].write(pretty_card_xml)
+                        indented_card = "    " + pretty_card_xml.replace("\n", "\n    ").rstrip()
+                        open_files[country].write("\n" + indented_card)
 
                     except ET.ParseError as e:
                         self.log(f"Error parsing card XML: {e} - XML: {card_xml[:200]}")
                         continue
         finally:
             for handle in open_files.values():
-                handle.write("</root>")
+                handle.write("\n</root>\n")
                 handle.close()
 
         self.success(f"Processed {processed_cards:,} business cards")
@@ -418,12 +410,6 @@ def main():
         help="Action to perform"
     )
 
-    parser.add_argument(
-        "-T", "--tmp-dir",
-        default="tmp",
-        help="Temporary directory (default: tmp)"
-    )
-
 
 
     parser.add_argument(
@@ -439,17 +425,9 @@ def main():
     )
 
     parser.add_argument(
-        "-N", "--number",
-        type=int,
-        default=10,
-        help="Number of largest files to show (default: 10)"
-    )
-
-    parser.add_argument(
-        "-M", "---max-bytes",
-        type=int,
-        default=1000000,
-        help="Maximum number of bytes per output file (default: 1000000)"
+        "-C", "--nocleanup",
+        action="store_false",
+        help="Do not delete existing XML files in extracts/ before starting (default: delete)"
     )
 
     parser.add_argument(
@@ -459,24 +437,31 @@ def main():
     )
 
     parser.add_argument(
-        "-C", "--cleanup",
-        action="store_true",
-        help="Delete all existing XML files in extracts/ before starting"
+        "-T", "--tmp",
+        default="tmp",
+        help="Temporary directory (default: tmp)"
+    )
+
+    parser.add_argument(
+        "-M", "--max",
+        type=int,
+        default=1000000,
+        help="Maximum number of bytes per output file (default: 1000000)"
     )
 
     args = parser.parse_args()
 
     # Create sync instance
     syncer = PeppolSync(
-        tmp_dir=args.tmp_dir,
+        tmp_dir=args.tmp,
         verbose=args.verbose,
-        max_bytes=args.max_bytes,
+        max_bytes=args.max,
         keep_tmp=args.keep_tmp
     )
 
     try:
         if args.action == "sync":
-            return syncer.sync(force_download=args.force, cleanup=args.cleanup)
+            return syncer.sync(force_download=args.force, cleanup=not args.nocleanup)
         elif args.action == "download":
             try:
                 input_file = syncer.download_xml(force=args.force)
@@ -494,7 +479,7 @@ def main():
             print(f"   Extracts directory: {syncer.extracts_dir}")
             return 0
         elif args.action == "huge":
-            return syncer.show_huge_files(args.number)
+            return syncer.show_huge_files(10)
     except KeyboardInterrupt:
         print("\n\n⚠️  Interrupted by user")
         return 130
