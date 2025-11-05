@@ -11,6 +11,7 @@ from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
 import xml.etree.ElementTree as ET
+from xml.dom import minidom
 from typing import Dict, TextIO, Optional
 from urllib.request import urlopen
 from urllib.error import URLError
@@ -205,7 +206,7 @@ class PeppolSync:
                     buffer = buffer[end_index:]
 
                     processed_cards += 1
-                    if processed_cards % 10000 == 0:
+                    if processed_cards % 100000 == 0:
                         self.progress(f"Processed {processed_cards:,} business cards...")
 
                     try:
@@ -245,7 +246,10 @@ class PeppolSync:
                                 self.file_count += 1
                             open_files[country] = file_handle
 
-                        open_files[country].write(card_xml)
+                        # Pretty print the XML before writing
+                        dom = minidom.parseString(card_xml)
+                        pretty_card_xml = dom.documentElement.toprettyxml(indent="    ")
+                        open_files[country].write(pretty_card_xml)
 
                     except ET.ParseError as e:
                         self.log(f"Error parsing card XML: {e} - XML: {card_xml[:200]}")
