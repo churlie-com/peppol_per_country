@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
 PEPPOL Business Cards Synchronization Script
-Streams through large XML export and splits by country/month
+Streams through large XML export and splits by country
 """
-
 import argparse
 import sys
 import os
