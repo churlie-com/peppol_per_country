@@ -1,6 +1,6 @@
 # PEPPOL Sync Report
 
-Generated on: 2025-11-19 14:27:21
+Generated on: 2025-11-20 15:08:08
 
 | Country | Files | Cards | Size (MB) |
 |---|---:|---:|---:|
