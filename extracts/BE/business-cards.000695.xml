@@ -1,5 +1,689 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root xmlns="urn:peppol:schema:pd:businesscard-generic:2025:03" version="3" creationdt="2026-07-20T03:17:18.303355435Z" codeListSupported="9.6">
+<root xmlns="urn:peppol:schema:pd:businesscard-generic:2025:03" version="3" creationdt="2026-07-21T03:21:44.832888454Z" codeListSupported="9.6">
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833200603"/>
+      <entity countrycode="BE">
+        <name name="JJ CONCEPT" language="fr"/>
+        <id scheme="EN" value="0833200603"/>
+        <id scheme="VAT" value="be0833200603"/>
+        <regdate>2026-01-05</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Credit Note 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Invoice 3.0" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833201393"/>
+      <entity countrycode="BE">
+        <name name="HELAU INVEST BV"/>
+        <geoinfo>Boslaan 61, Overijse, 3090</geoinfo>
+        <id scheme="VAT" value="BE0833201393"/>
+        <regdate>2025-12-31</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Invoice" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Credit Note" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0::2.1" displayname="XRechnung UBL Invoice V3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0::2.1" displayname="XRechnung UBL Credit Note V3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833201888"/>
+      <entity countrycode="BE">
+        <name name="RAMO BEN" language="fr"/>
+        <regdate>2025-12-19</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833202878"/>
+      <entity countrycode="BE">
+        <name name="Deback electrics" language="nl"/>
+        <regdate>2023-08-31</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833202977"/>
+      <entity countrycode="BE">
+        <name name="BV Zara M.G." language="nl"/>
+        <regdate>2026-01-28</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833203076"/>
+      <entity countrycode="BE">
+        <name name="Bruylants Ariane"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833203076"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833203076"/>
+        <regdate>2025-08-13</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833203274"/>
+      <entity countrycode="BE">
+        <name name="La Galleria Collection bv"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833203274"/>
+        <regdate>2025-10-27</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833203373"/>
+      <entity countrycode="BE">
+        <name name="Florence Hoorickx, Architecte" language="fr"/>
+        <id scheme="EN" value="0833203373"/>
+        <id scheme="VAT" value="BE0833203373"/>
+        <regdate>2025-11-03</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833203472"/>
+      <entity countrycode="BE">
+        <name name="HOFMAN Jessica"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833203472"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833203472"/>
+        <regdate>2026-05-05</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833203769"/>
+      <entity countrycode="BE">
+        <name name="Percept" language="nl"/>
+        <regdate>2023-08-31</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833203868"/>
+      <entity countrycode="BE">
+        <name name="SCHOEPP &amp; ASSOCIES" language="fr"/>
+        <regdate>2025-12-29</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833203967"/>
+      <entity countrycode="BE">
+        <name name="Vertof Consult COMMV"/>
+        <additionalinfo>Via The Yuki Company</additionalinfo>
+        <regdate>2025-11-19</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833204165"/>
+      <entity countrycode="BE">
+        <name name="NTheo"/>
+        <additionalinfo>Via The Yuki Company B.V. (Lucy)</additionalinfo>
+        <regdate>2025-12-17</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833206343"/>
+      <entity countrycode="BE">
+        <name name="1530 Bv" language="nl"/>
+        <regdate>2026-04-27</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833206838"/>
+      <entity countrycode="BE">
+        <name name="Szeszko Dariusz" language="fr"/>
+        <id scheme="EN" value="0833206838"/>
+        <id scheme="VAT" value="BE0833206838"/>
+        <regdate>2026-01-19</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833206937"/>
+      <entity countrycode="BE">
+        <name name="SD SECURITY"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833206937"/>
+        <contact name="CHRISTIAN JACQUES O VERMEERSCH" email="christian.vermeersch@sdsecurity.be"/>
+        <regdate>2025-09-04</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833207036"/>
+      <entity countrycode="BE">
+        <name name="MIRAYA" language="nl"/>
+        <regdate>2026-01-05</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833207234"/>
+      <entity countrycode="BE">
+        <name name="MINETECH"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833207234"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833207234"/>
+        <regdate>2025-12-11</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833207333"/>
+      <entity countrycode="BE">
+        <name name="OOSTENDE KOERSE" language="nl"/>
+        <regdate>2020-11-20</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833207432"/>
+      <entity countrycode="BE">
+        <name name="MASSART CommVLO"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833207432"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833207432"/>
+        <regdate>2025-06-26</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833207729"/>
+      <entity countrycode="BE">
+        <name name="Ezel" language="fr"/>
+        <id scheme="EN" value="0833207729"/>
+        <id scheme="VAT" value="BE0833207729"/>
+        <regdate>2026-01-26</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833207828"/>
+      <entity countrycode="BE">
+        <name name="Gorgon Valerie" language="nl"/>
+        <regdate>2026-03-27</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833208323"/>
+      <entity countrycode="BE">
+        <name name="Juliaan BV" language="nl"/>
+        <regdate>2026-02-03</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833208620"/>
+      <entity countrycode="BE">
+        <name name="A3O BV" language="nl"/>
+        <regdate>2025-09-07</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833208818"/>
+      <entity countrycode="BE">
+        <name name="Basics Consulting"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833208818"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833208818"/>
+        <regdate>2025-12-01</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833208917"/>
+      <entity countrycode="BE">
+        <name name="De Vliegher, Jan Marcel"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833208917"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833208917"/>
+        <regdate>2025-11-18</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833210006"/>
+      <entity countrycode="BE">
+        <name name="MAURICE VAN ROOSBROECK &amp; CO VOF"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833210006"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833210006"/>
+        <regdate>2025-02-11</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833210105"/>
+      <entity countrycode="BE">
+        <name name="AccFin Tax SRL"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833210105"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833210105"/>
+        <regdate>2024-11-29</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833210204"/>
+      <entity countrycode="BE">
+        <name name="ESCAUT VALLEY" language="nl"/>
+        <regdate>2026-03-31</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833210303"/>
+      <entity countrycode="BE">
+        <name name="Immo Steelint BV" language="nl"/>
+        <regdate>2025-12-15</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833210697"/>
+      <entity countrycode="BE">
+        <name name="Racioppo, Elodie"/>
+        <regdate>2020-11-20</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833211687"/>
+      <entity countrycode="BE">
+        <name name="PP RETAIL HOLDING"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833211687"/>
+        <contact name="Valérie Van Bourgogne" phone="+32 479 91 08 83" email="valerie.vanbourgogne@ppretail.com"/>
+        <regdate>2025-08-26</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833211786"/>
+      <entity countrycode="BE">
+        <name name="FUCHSIA"/>
+        <geoinfo>Jette</geoinfo>
+        <id scheme="0208" value="0833211786"/>
+        <regdate>2026-04-16</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Invoice 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Credit Note 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Order-2::Order##urn:fdc:peppol.eu:poacc:trns:order:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0::2.2" displayname="EHF Advanced Order Initiation 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833211984"/>
+      <entity countrycode="BE">
+        <name name="PAPILLON CONSULTANCY"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833211984"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833211984"/>
+        <regdate>2025-11-25</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833212182"/>
+      <entity countrycode="BE">
+        <name name="Organum"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833212182"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833212182"/>
+        <regdate>2026-01-26</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833212380"/>
+      <entity countrycode="BE">
+        <name name="VHM FRUIT TRADE BV"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833212380"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833212380"/>
+        <regdate>2025-10-21</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833212677"/>
+      <entity countrycode="BE">
+        <name name="TOLSTOY CHRISTINA TAMARA" language="fr"/>
+        <id scheme="EN" value="0833212677"/>
+        <id scheme="VAT" value="BE0833212677"/>
+        <regdate>2025-06-24</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833212974"/>
+      <entity countrycode="BE">
+        <name name="Eloot Financial Risc Manangement CommV" language="nl"/>
+        <regdate>2025-12-30</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833214459"/>
+      <entity countrycode="BE">
+        <name name="Wouter Brackx BV" language="nl"/>
+        <regdate>2026-03-27</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833214756"/>
+      <entity countrycode="BE">
+        <name name=" Vanderheyden Glen" language="nl"/>
+        <regdate>2025-10-05</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:peppol:pint:billing-1@sg-1::2.1" non-standard="true"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="peppol-doctype-wildcard" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:peppol:pint:billing-1*::2.1" displayname="Peppol PINT Credit Note v1.0" state="act"/>
+      <doctypeid scheme="peppol-doctype-wildcard" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:peppol:pint:billing-1*::2.1" displayname="Peppol PINT Invoice v1.0" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833215251"/>
+      <entity countrycode="BE">
+        <name name="Sparverius BV"/>
+        <additionalinfo>Via The Yuki Company</additionalinfo>
+        <regdate>2022-12-13</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833215350"/>
+      <entity countrycode="BE">
+        <name name="New Immo Vercammen BV"/>
+        <regdate>2025-09-25</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833215944"/>
+      <entity countrycode="BE">
+        <name name="Trinergy srl"/>
+        <geoinfo>Av. Georges Henri 393, Woluwe-Saint-Lambert, 1200</geoinfo>
+        <id scheme="VAT" value="BE0833215944"/>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Invoice" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Credit Note" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:sg:3.0::2.1" displayname="SG Peppol BIS Billing 3.0 Invoice" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:sg:3.0::2.1" displayname="SG Peppol BIS Billing 3.0 Credit Note" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0::2.1" displayname="XRechnung UBL Invoice V3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0::2.1" displayname="XRechnung UBL Credit Note V3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:aunz:3.0::2.1" displayname="AU-NZ Peppol BIS Billing 3.0 Invoice" state="dep"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:aunz:3.0::2.1" displayname="AU-NZ Peppol BIS Billing 3.0 Credit Note" state="dep"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833216043"/>
+      <entity countrycode="BE">
+        <name name="Van de Woestijne, Pieter André"/>
+        <regdate>2020-11-20</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833216241"/>
+      <entity countrycode="BE">
+        <name name="SCS MP INSTAL"/>
+        <name name="MP INSTAL"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833216241"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833216241"/>
+        <regdate>2025-12-22</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833216340"/>
+      <entity countrycode="BE">
+        <name name="ZAHAV" language="fr"/>
+        <id scheme="EN" value="0833216340"/>
+        <id scheme="VAT" value="BE0833216340"/>
+        <regdate>2025-12-04</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833216439"/>
+      <entity countrycode="BE">
+        <name name="CLINAID CLINICAL SERVICES"/>
+        <name name="ClinAid Clinical Services"/>
+        <name name="ClinAid Clinical Services"/>
+        <id scheme="iso6523-actorid-upis" value="0208:0833216439"/>
+        <id scheme="iso6523-actorid-upis" value="9925:be0833216439"/>
+        <regdate>2023-11-24</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833217033"/>
+      <entity countrycode="BE">
+        <name name="SEBASTIEN DE WILDE" language="fr"/>
+        <id scheme="EN" value="0833217033"/>
+        <id scheme="VAT" value="be0833217033"/>
+        <regdate>2026-07-03</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833217825"/>
+      <entity countrycode="BE">
+        <name name="FSandB Management" language="nl"/>
+        <regdate>2025-10-05</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:peppol:pint:billing-1@sg-1::2.1" non-standard="true"/>
+      <doctypeid scheme="peppol-doctype-wildcard" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:peppol:pint:billing-1*::2.1" displayname="Peppol PINT Credit Note v1.0" state="act"/>
+      <doctypeid scheme="peppol-doctype-wildcard" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:peppol:pint:billing-1*::2.1" displayname="Peppol PINT Invoice v1.0" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833217924"/>
+      <entity countrycode="BE">
+        <name name="Valorum Management"/>
+        <additionalinfo>Via The Yuki Company B.V. (Lucy)</additionalinfo>
+        <regdate>2025-11-26</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833218914"/>
+      <entity countrycode="BE">
+        <name name="DRC BV" language="nl"/>
+        <regdate>2025-07-31</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+    </businesscard>
     <businesscard>
       <participant scheme="iso6523-actorid-upis" value="0208:0833219112"/>
       <entity countrycode="BE">
@@ -209,6 +893,21 @@
       <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
       <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
       <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
+    </businesscard>
+    <businesscard>
+      <participant scheme="iso6523-actorid-upis" value="0208:0833225446"/>
+      <entity countrycode="BE">
+        <name name="ART ROLAND CONSULT" language="fr"/>
+        <id scheme="EN" value="0833225446"/>
+        <id scheme="VAT" value="be0833225446"/>
+        <regdate>2026-07-20</regdate>
+      </entity>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
+      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
     </businesscard>
     <businesscard>
       <participant scheme="iso6523-actorid-upis" value="0208:0833225743"/>
@@ -8776,17 +9475,6 @@
       <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
     </businesscard>
     <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833436371"/>
-      <entity countrycode="BE">
-        <name name="FRANCOIS ANNE-CATHERINE" language="fr"/>
-        <id scheme="EN" value="0833436371"/>
-        <id scheme="VAT" value="BE0833436371"/>
-        <regdate>2025-12-08</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
       <participant scheme="iso6523-actorid-upis" value="0208:0833437163"/>
       <entity countrycode="BE">
         <name name="PERCUAIR'DENS SRL"/>
@@ -15087,664 +15775,5 @@
       <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
       <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
       <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833599192"/>
-      <entity countrycode="BE">
-        <name name="GRAPHIC SOLUTIONS SComm" language="fr"/>
-        <regdate>2025-11-29</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833599489"/>
-      <entity countrycode="BE">
-        <name name="LITTLE BUSINESS SHOP" language="fr"/>
-        <regdate>2025-12-18</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833600281"/>
-      <entity countrycode="BE">
-        <name name="La ferme du Poirier"/>
-        <regdate>2026-02-14</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Invoice" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Credit Note" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833600380"/>
-      <entity countrycode="BE">
-        <name name="Nánási, József" language="en"/>
-        <regdate>2026-01-23</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833600677"/>
-      <entity countrycode="BE">
-        <name name="REGENCY"/>
-        <regdate>2025-12-09</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833600875"/>
-      <entity countrycode="BE">
-        <name name="VER I ACP Rés. Le Versailles I"/>
-        <geoinfo>Tournai</geoinfo>
-        <regdate>2026-03-18</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Invoice 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Credit Note 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Order-2::Order##urn:fdc:peppol.eu:poacc:trns:order:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0::2.2" displayname="EHF Advanced Order Initiation 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833600974"/>
-      <entity countrycode="BE">
-        <name name="VER II ACP Rés. Le Versailles II"/>
-        <geoinfo>Tournai</geoinfo>
-        <regdate>2026-03-18</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Invoice 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Credit Note 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Order-2::Order##urn:fdc:peppol.eu:poacc:trns:order:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0::2.2" displayname="EHF Advanced Order Initiation 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833601172"/>
-      <entity countrycode="BE">
-        <name name="VER III ACP Rés. Le Versailles III"/>
-        <geoinfo>TOURNAI</geoinfo>
-        <regdate>2026-03-18</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Invoice 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Credit Note 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Order-2::Order##urn:fdc:peppol.eu:poacc:trns:order:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0::2.2" displayname="EHF Advanced Order Initiation 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833601667"/>
-      <entity countrycode="BE">
-        <name name="Vandepoele Mathieu"/>
-        <id scheme="iso6523-actorid-upis" value="0208:0833601667"/>
-        <id scheme="iso6523-actorid-upis" value="9925:be0833601667"/>
-        <regdate>2025-11-21</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833602558"/>
-      <entity countrycode="BE">
-        <name name="FIGHT OFF ASBL" language="fr"/>
-        <regdate>2025-12-04</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833602954"/>
-      <entity countrycode="BE">
-        <name name="Mohammed Berchid - NP (Mo &amp; Ka Klusjesman)"/>
-        <additionalinfo>Via The Yuki Company B.V. (Lucy)</additionalinfo>
-        <regdate>2025-09-22</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833603251"/>
-      <entity countrycode="BE">
-        <name name="VAGENHENDE SANDRO"/>
-        <id scheme="iso6523-actorid-upis" value="9925:be0833603251"/>
-        <id scheme="iso6523-actorid-upis" value="0208:0833603251"/>
-        <regdate>2025-12-12</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833603449"/>
-      <entity countrycode="BE">
-        <name name="HOUTE" language="nl"/>
-        <regdate>2026-01-08</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833603845"/>
-      <entity countrycode="BE">
-        <name name="HARA"/>
-        <additionalinfo>Via The Yuki Company B.V. (Lucy)</additionalinfo>
-        <regdate>2025-12-03</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833604043"/>
-      <entity countrycode="BE">
-        <name name="Ac Ontwerpburo BV"/>
-        <regdate>2025-12-19</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833604736"/>
-      <entity countrycode="BE">
-        <name name="VW Consultants &amp; Co" language="nl"/>
-        <regdate>2026-03-27</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Credit Note" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Invoice" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833605330"/>
-      <entity countrycode="BE">
-        <name name="Anbaco - Anja B."/>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833605825"/>
-      <entity countrycode="BE">
-        <name name="Karnišauskis Artis" language="nl"/>
-        <regdate>2025-12-18</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="peppol-doctype-wildcard" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:peppol:pint:billing-1*::2.1" displayname="Peppol PINT Credit Note v1.0" state="act"/>
-      <doctypeid scheme="peppol-doctype-wildcard" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:peppol:pint:billing-1*::2.1" displayname="Peppol PINT Invoice v1.0" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833606023"/>
-      <entity countrycode="BE">
-        <name name="Devillers, Delphine"/>
-        <additionalinfo>Via Accountable</additionalinfo>
-        <regdate>2026-01-02</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833606914"/>
-      <entity countrycode="BE">
-        <name name="Walpot Theo" language="nl"/>
-        <id scheme="EN" value="0833606914"/>
-        <id scheme="VAT" value="be0833606914"/>
-        <regdate>2025-03-10</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Credit Note 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Invoice 3.0" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833607112"/>
-      <entity countrycode="BE">
-        <name name="EuroGeographics VZW" language="fr"/>
-        <regdate>2025-07-14</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833607211"/>
-      <entity countrycode="BE">
-        <name name="REFE SM"/>
-        <id scheme="iso6523-actorid-upis" value="0208:0833607211"/>
-        <contact name="Sylvie Steutelings" phone="083/232350" email="s.steutelings@ronveaux.com"/>
-        <regdate>2025-09-04</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833607706"/>
-      <entity countrycode="BE">
-        <name name="Crompot, Nathalie Marie"/>
-        <regdate>2026-02-10</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Credit Note 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Invoice 3.0" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833607904"/>
-      <entity countrycode="BE">
-        <name name="Vrancken Johnny Jef"/>
-        <additionalinfo>Via The Yuki Company</additionalinfo>
-        <regdate>2025-10-01</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833608397"/>
-      <entity countrycode="BE">
-        <name name="ORGELHUIS DELOBELLE COMM.V."/>
-        <id scheme="iso6523-actorid-upis" value="0208:0833608397"/>
-        <id scheme="iso6523-actorid-upis" value="9925:be0833608397"/>
-        <regdate>2024-12-19</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833608694"/>
-      <entity countrycode="BE">
-        <name name="Dunca, Sergiu-Stelian"/>
-        <additionalinfo>Via Accountable</additionalinfo>
-        <regdate>2026-01-16</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833609981"/>
-      <entity countrycode="BE">
-        <name name="LoCHViLA SRL"/>
-        <id scheme="iso6523-actorid-upis" value="0208:0833609981"/>
-        <id scheme="iso6523-actorid-upis" value="9925:be0833609981"/>
-        <regdate>2026-01-14</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833610377"/>
-      <entity countrycode="BE">
-        <name name="Dimitriou, Dimitri"/>
-        <regdate>2020-11-20</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833611169"/>
-      <entity countrycode="BE">
-        <name name="Succes Tekst"/>
-        <regdate>2024-07-29</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Credit Note 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Invoice 3.0" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833611862"/>
-      <entity countrycode="BE">
-        <name name="HANSSENS - DE MOOR EVENTS V.O.F." language="nl"/>
-        <regdate>2026-02-11</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833612159"/>
-      <entity countrycode="BE">
-        <name name="Winservices SNC" language="fr"/>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Credit Note 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Invoice 3.0" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833612753"/>
-      <entity countrycode="BE">
-        <name name="vivianne delhez" language="fr"/>
-        <regdate>2026-03-10</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833613149"/>
-      <entity countrycode="BE">
-        <name name="Verreydt Kris" language="nl"/>
-        <regdate>2025-07-02</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="peppol-doctype-wildcard" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:peppol:pint:billing-1*::2.1" displayname="Peppol PINT Invoice v1.0" state="act"/>
-      <doctypeid scheme="peppol-doctype-wildcard" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:peppol:pint:billing-1*::2.1" displayname="Peppol PINT Credit Note v1.0" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833613446"/>
-      <entity countrycode="BE">
-        <name name="Engelen Femke Mieke"/>
-        <additionalinfo>Via The Yuki Company B.V. (Lucy)</additionalinfo>
-        <regdate>2025-07-11</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833613545"/>
-      <entity countrycode="BE">
-        <name name="Janssens, Bart"/>
-        <id scheme="iso6523-actorid-upis" value="0208:0833613545"/>
-        <id scheme="iso6523-actorid-upis" value="9925:be0833613545"/>
-        <regdate>2026-05-05</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833613644"/>
-      <entity countrycode="BE">
-        <name name="Brabants Eldiena (639)" language="nl"/>
-        <id scheme="EN" value="0833613644"/>
-        <id scheme="VAT" value="be0833613644"/>
-        <regdate>2025-11-19</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Credit Note 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:UBL.BE:1.0.0.20180214::2.1" displayname="UBL.BE Invoice 3.0" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833613842"/>
-      <entity countrycode="BE">
-        <name name="Herman Ioan" language="fr"/>
-        <regdate>2026-01-21</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833613941"/>
-      <entity countrycode="BE">
-        <name name="Ernst, Claudine Marie" language="fr"/>
-        <regdate>2025-12-17</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833614436"/>
-      <entity countrycode="BE">
-        <name name="OPENLAB" language="nl"/>
-        <regdate>2023-08-31</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833614535"/>
-      <entity countrycode="BE">
-        <name name="Scheepmans, Johan"/>
-        <regdate>2020-11-20</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833614931"/>
-      <entity countrycode="BE">
-        <name name="JASSIN LONNEUX SRL" language="fr"/>
-        <id scheme="EN" value="0833614931"/>
-        <id scheme="VAT" value="BE0833614931"/>
-        <regdate>2025-10-06</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833615426"/>
-      <entity countrycode="BE">
-        <name name="HEATING SOLUTIONS SPRL"/>
-        <id scheme="0208" value="0833615426"/>
-        <id scheme="9925" value="be0833615426"/>
-        <additionalinfo>Powered by Routty (https://www.dynatos.com/software/routty)</additionalinfo>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833616119"/>
-      <entity countrycode="BE">
-        <name name="ETABLISSEMENTS VANHOVE-GAVA SRL"/>
-        <name name="ETABLISSEMENTS VANHOVE-GAVA"/>
-        <id scheme="iso6523-actorid-upis" value="0208:0833616119"/>
-        <id scheme="iso6523-actorid-upis" value="9925:be0833616119"/>
-        <regdate>2025-11-21</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833616812"/>
-      <entity countrycode="BE">
-        <name name="Duthoy  Emmanuel"/>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833617505"/>
-      <entity countrycode="BE">
-        <name name="XEFI Zaventem"/>
-        <geoinfo>Imperiastraat 6, Zaventem, 1930</geoinfo>
-        <regdate>2026-01-26</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Invoice" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Credit Note" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0::2.1" displayname="XRechnung UBL Invoice V3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0::2.1" displayname="XRechnung UBL Credit Note V3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833618097"/>
-      <entity countrycode="BE">
-        <name name="SRL PRIMES-SERVICES"/>
-        <geoinfo>Rue Beckers 19, Etterbeek, 1040</geoinfo>
-        <id scheme="VAT" value="BE0833618097"/>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Invoice" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:nen.nl:nlcius:v1.0::2.1" displayname="SI-UBL 2.0 Credit Note" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:sg:3.0::2.1" displayname="SG Peppol BIS Billing 3.0 Invoice" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:sg:3.0::2.1" displayname="SG Peppol BIS Billing 3.0 Credit Note" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0::2.1" displayname="XRechnung UBL Invoice V3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0::2.1" displayname="XRechnung UBL Credit Note V3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:aunz:3.0::2.1" displayname="AU-NZ Peppol BIS Billing 3.0 Invoice" state="dep"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:aunz:3.0::2.1" displayname="AU-NZ Peppol BIS Billing 3.0 Credit Note" state="dep"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833618493"/>
-      <entity countrycode="BE">
-        <name name="Vereniging van de Medeeïgenaars te Ganshoren, hoek van de Keizer Karelstraat en van de Heirbautstraat 1"/>
-        <id scheme="iso6523-actorid-upis" value="9925:be0833618493"/>
-        <id scheme="iso6523-actorid-upis" value="0208:0833618493"/>
-        <regdate>2026-01-08</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833618988"/>
-      <entity countrycode="BE">
-        <name name="Dierynck, Eveline"/>
-        <id scheme="iso6523-actorid-upis" value="0208:0833618988"/>
-        <id scheme="iso6523-actorid-upis" value="9925:be0833618988"/>
-        <regdate>2025-09-26</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:invoice_response:3::2.1" displayname="Peppol Invoice Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-    </businesscard>
-    <businesscard>
-      <participant scheme="iso6523-actorid-upis" value="0208:0833619186"/>
-      <entity countrycode="BE">
-        <name name="TAKE OFF BV"/>
-        <additionalinfo>Via The Yuki Company</additionalinfo>
-        <regdate>2026-07-13</regdate>
-      </entity>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2::ApplicationResponse##urn:fdc:peppol.eu:poacc:trns:mlr:3::2.1" displayname="Peppol Message Level Response transaction 3.0" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Credit Note V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1" displayname="Peppol BIS Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0::2.1" displayname="Peppol BIS Self-Billing UBL Invoice V3" state="act"/>
-      <doctypeid scheme="busdox-docid-qns" value="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100::CrossIndustryInvoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::D16B" displayname="Peppol BIS Billing CII Invoice V3" state="act"/>
     </businesscard>
 </root>
